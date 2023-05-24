@@ -18,6 +18,12 @@ function Counter(props){
         onClick={() => {
             setState({...state, count: state.count+1})
         }}
+    Hooks in React has an order it is stored and if you use custom Hooks it is
+    recommended to keep your state separate because you may use it in your custom
+    hook. Also note you can not conditionlise your custom hooks or useState like:
+        if(true){
+            const [someState, setSomeState] = useState(false);
+        }
     */
     const [active, setActive] = useState(true);
     
